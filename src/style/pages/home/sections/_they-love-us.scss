@@ -1,0 +1,40 @@
+.section#they-love-us {
+  .slider {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+      content: "";
+      background-color: $amber-200;
+      border-radius: map-get($spacers, 4);
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: map-get($spacers, 8);
+      width: 100%;
+      padding: map-get($spacers, 4);
+      padding-top: map-get($spacers, 10);
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & > * {
+        flex-shrink: 0;
+      }
+    }
+
+    .slide {
+      scroll-snap-align: center;
+      z-index: 1;
+    }
+  }
+}
