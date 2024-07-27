@@ -1,0 +1,42 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "radius": (
+      property: border-radius,
+      class: radius,
+      responsive: true,
+      values: $spacers,
+    ),
+    "z-index": (
+      property: z-index,
+      class: z,
+      responsive: true,
+      values: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        10: 10,
+      ),
+    ),
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          values: map-merge(map-get(map-get($utilities, "width"), "values"), $position-values),
+        )
+      ),
+    "height":
+      map-merge(
+        map-get($utilities, "height"),
+        (
+          values: map-merge(map-get(map-get($utilities, "height"), "values"), $position-values),
+        )
+      ),
+  )
+);

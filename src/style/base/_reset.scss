@@ -1,0 +1,19 @@
+// Scrollbar
+* {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0;
+    background: $amber-100;
+  }
+
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-track-piece,
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+    background: $amber-100;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $amber-700;
+  }
+}

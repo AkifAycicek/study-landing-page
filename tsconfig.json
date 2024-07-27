@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "types": ["vite/client", "node"],
+    "module": "NodeNext",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@style/*": ["src/style/*"],
+      "@scss/*": ["src/style/scss/"],
+      "@components/*": ["src/components/*"],
+      "@router/*": ["src/router/*"],
+      "@pages/*": ["src/pages/*"],
+      "@plugins/*": ["src/plugins/*"]
+    },
+    "composite": true,
+    "allowSyntheticDefaultImports": false
+  },
+  "include": ["auto-imports.d.ts", "src/**/*"]
+}

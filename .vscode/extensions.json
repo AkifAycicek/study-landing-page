@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "mgmcdermott.vscode-language-babel",
+    "esbenp.prettier-vscode",
+    "xabikos.javascriptsnippets",
+    "cipchk.cssrem"
+  ]
+}
