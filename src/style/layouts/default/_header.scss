@@ -1,0 +1,59 @@
+.app {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: map-get($spacers, 6) map-get($spacers, 20);
+    scroll-snap-align: start;
+
+    .app-header-menu {
+      &.list-group {
+        --bs-list-group-color: #{$amber-900};
+        --bs-list-group-bg: transparent;
+        --bs-list-group-border-width: 0;
+        --bs-list-group-item-padding-x: #{$spacer * 2};
+        --bs-list-group-item-padding-y: #{$spacer * 3};
+
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: map-get($font-sizes, "base");
+      }
+
+      &-btn {
+        display: none;
+        transform: scaleX(-1);
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: map-get($spacers, 4) map-get($spacers, 4);
+
+      .app-header-menu {
+        position: fixed;
+        top: 0;
+        left: 0%;
+        z-index: 10;
+        place-content: center center;
+        width: 100vw;
+        height: 100vh;
+        background-color: $amber-100;
+        opacity: 1;
+        transition: left 0.3s ease-in, opacity 0.3s ease-in;
+
+        &:not(.active) {
+          left: 100%;
+          opacity: 0;
+        }
+
+        &-btn {
+          z-index: 11;
+          display: unset;
+
+          &.active {
+            transform: unset;
+          }
+        }
+      }
+    }
+  }
+}

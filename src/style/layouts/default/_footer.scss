@@ -1,0 +1,16 @@
+.app {
+  &-footer {
+    padding: 0 map-get($spacers, 20);
+    color: white;
+    background: $slate-900;
+    scroll-snap-align: start;
+
+    .list-group {
+      --bs-list-group-border-width: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 $spacer;
+  }
+}
