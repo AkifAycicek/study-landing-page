@@ -1,0 +1,56 @@
+.section#why-join-us {
+  .video {
+    &-decorations {
+      span {
+        position: absolute;
+        pointer-events: none;
+      }
+
+      span:nth-child(1) {
+        top: 25%;
+        left: -15%;
+        width: 115%;
+        height: 50%;
+        background: $amber-200;
+        transform: rotate(-45deg);
+        transform-origin: center;
+      }
+
+      span:nth-child(2) {
+        @include rfs(1rem, top);
+        @include rfs(-1rem, left);
+        @include rfs(6rem, width);
+        @include rfs(2rem, border-radius);
+
+        aspect-ratio: 1;
+        background: $amber-700;
+        opacity: 0.75;
+      }
+
+      span:nth-child(3) {
+        @include rfs(6rem, width);
+        @include rfs(-2.5rem, bottom);
+        @include rfs(4rem, left);
+
+        z-index: 1;
+        aspect-ratio: 1;
+        background: $green-700;
+        border-radius: 50%;
+        opacity: 0.75;
+      }
+
+      span:nth-child(4) {
+        @include rfs(13rem, width);
+        @include rfs(3rem, border-radius);
+
+        right: 0;
+        bottom: 0;
+        aspect-ratio: 1;
+        background: $pink-700;
+        opacity: 0.75;
+        transform: translate(55%, 55%);
+        transform-origin: center;
+      }
+    }
+  }
+}
