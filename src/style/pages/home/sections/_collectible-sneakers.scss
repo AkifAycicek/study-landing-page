@@ -1,0 +1,18 @@
+.section#collectible-sneakers {
+  position: relative;
+
+  .sneakers-image {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 12%;
+      left: 12%;
+      width: 76%;
+      aspect-ratio: 1;
+      content: "";
+      background-color: $amber-400;
+      @include rfs($spacer * 12, border-radius);
+    }
+  }
+}

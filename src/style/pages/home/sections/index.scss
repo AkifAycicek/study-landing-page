@@ -1,0 +1,11 @@
+@import "./collectible-sneakers";
+
+.section {
+  position: relative;
+  padding: map-get($spacers, 20);
+  scroll-snap-align: center;
+
+  @include media-breakpoint-down(lg) {
+    padding: map-get($spacers, 12) map-get($spacers, 4);
+  }
+}
