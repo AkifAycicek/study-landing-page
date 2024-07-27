@@ -1,4 +1,5 @@
 import { CollectibleSneakers } from "./_sections/collectibleSneakers";
+import { TheBest } from "./_sections/theBest";
 import { Trophies } from "./_sections/trophies";
 
 export function HomePage() {
@@ -8,6 +9,7 @@ export function HomePage() {
         <CollectibleSneakers />
         <Trophies />
       </span>
+      <TheBest />
     </div>
   );
 }
