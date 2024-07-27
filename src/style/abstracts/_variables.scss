@@ -1,1 +1,40 @@
+@use "sass:map";
 
+// Typography
+$caption-font-size: map.get($font-sizes, "lg");
+$caption-font-weight: bold;
+$caption-text-transform: uppercase;
+$caption-letter-spacing: 3px;
+$headline-font-size: map.get($font-sizes, "7xl");
+$headline-font-weight: bolder;
+$headline-line-height: 110%;
+$headline-second-font-size: $spacer * 14;
+
+//  Buttons
+//// Buttons - xs
+$btn-padding-y-xs: map.get($spacers, 1);
+$btn-padding-x-xs: map.get($spacers, 2);
+$btn-font-size-xs: map.get($font-sizes, "xs");
+$btn-border-radius-xs: map.get($spacers, 1);
+
+//// Buttons - xl
+$btn-padding-y-xl: map.get($spacers, 6);
+$btn-padding-x-xl: map.get($spacers, 5);
+$btn-font-size-xl: map.get($font-sizes, "2xl");
+$btn-border-radius-xl: map.get($spacers, 2);
+
+// Button Group
+$btn-group-gap: map.get($spacers, 4);
+
+// Content Box
+$content-box-border-radius: map.get($spacers, 5);
+$content-box-shadow: 0 25px 50px -12px;
+$content-box-shadow-color: rgb(0 0 0 / 10%);
+
+// Desktop Frame
+$desktop-frame-radius: map.get($spacers, 5);
+$desktop-frame-border: solid 5px black;
+$desktop-frame-shadow: 0 25px 50px -12px;
+$desktop-frame-shadow-color: rgba(0 0 0 / 25%);
+$desktop-frame-topbar-padding-x: map.get($spacers, 2);
+$desktop-frame-topbar-padding-y: map.get($spacers, 4);

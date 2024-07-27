@@ -50,3 +50,32 @@ $theme-colors: (
   "black": $black,
 );
 $theme-colors: map.merge($theme-colors, $tailwind-colors);
+
+// Buttons
+$btn-padding-y: map.get($spacers, 3);
+$btn-padding-x: map.get($spacers, 3);
+$btn-border-radius: map.get($spacers, 2);
+$btn-line-height: map.get($spacers, 6);
+$btn-border-width: 2px;
+
+//// Buttons - sm
+$btn-padding-y-sm: map.get($spacers, 3);
+$btn-padding-x-sm: map.get($spacers, 2);
+$btn-font-size-sm: map.get($font-sizes, "sm");
+$btn-border-radius-sm: map.get($spacers, 2);
+
+//// Buttons - lg
+$btn-padding-y-lg: map.get($spacers, 4);
+$btn-padding-x-lg: map.get($spacers, 4);
+$btn-font-size-lg: map.get($font-sizes, "xl");
+$btn-border-radius-lg: map.get($spacers, 2);
+
+// Typography
+$font-size-base: 1.125rem;
+$paragraph-margin-bottom: map.get($spacers, 2);
+
+// Badge
+$badge-padding-x: map.get($spacers, 2);
+$badge-padding-y: $spacer;
+$badge-border-radius: $spacer;
+$badge-font-size: 0.875rem;

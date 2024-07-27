@@ -1,1 +1,16 @@
+.caption {
+  font-size: var(--caption-font-size);
+  font-weight: var(--caption-font-weight);
+  text-transform: var(--caption-text-transform);
+  letter-spacing: var(--caption-letter-spacing);
+}
 
+.headline {
+  font-size: var(--headline-font-size);
+  font-weight: var(--headline-font-weight);
+  line-height: var(--headline-line-height);
+
+  &--second {
+    font-size: var(--headline-second-font-size);
+  }
+}

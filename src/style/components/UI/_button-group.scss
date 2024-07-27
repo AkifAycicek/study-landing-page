@@ -1,0 +1,12 @@
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--btn-group-gap);
+  align-items: center;
+  justify-content: center;
+
+  &--vertical {
+    flex-direction: column;
+    align-items: inherit;
+  }
+}

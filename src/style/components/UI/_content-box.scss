@@ -1,0 +1,68 @@
+@use "sass:map";
+
+.content-box {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: map.get($spacers, 96);
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: var(--content-box-border-radius);
+  box-shadow: var(--content-box-shadow) var(--content-box-shadow-color);
+
+  &-header {
+    position: relative;
+    margin-bottom: map.get($spacers, 8);
+
+    &:has(.content-box-img--thumb) {
+      margin-bottom: map.get($spacers, 16);
+    }
+
+    .content-box-img {
+      & > img {
+        width: 100%;
+        max-height: map.get($spacers, 55);
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &--thumb {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        overflow: hidden;
+        border-radius: 50%;
+        transform: translate(-50%, 50%);
+
+        & > img {
+          width: map.get($spacers, 24);
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+
+    .content-box-img-badge {
+      position: absolute;
+      top: map.get($spacers, 4);
+      left: map.get($spacers, 4);
+    }
+  }
+
+  &-icon {
+    margin: map-get($spacers, 4) map-get($spacers, 8);
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 map-get($spacers, 8);
+  }
+
+  &-content {
+    margin: map-get($spacers, 4) map.get($spacers, 8);
+  }
+
+  &-buttons {
+    margin: map.get($spacers, 8);
+  }
+}

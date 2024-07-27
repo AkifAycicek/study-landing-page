@@ -1,0 +1,29 @@
+.btn {
+  display: flex;
+  gap: map-get($spacers, 2);
+  align-items: center;
+  justify-content: center;
+
+  &-text {
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}
+
+.btn-xs {
+  @include button-size(
+    $btn-padding-y-xs,
+    $btn-padding-x-xs,
+    $btn-font-size-xs,
+    $btn-border-radius-xs
+  );
+}
+
+.btn-xl {
+  @include button-size(
+    $btn-padding-y-xl,
+    $btn-padding-x-xl,
+    $btn-font-size-xl,
+    $btn-border-radius-xl
+  );
+}

@@ -1,1 +1,48 @@
+@use "sass:map";
 
+:root {
+  // Typography
+  .caption {
+    @include rfs($caption-font-size, --caption-font-size);
+
+    --caption-font-weight: #{$caption-font-weight};
+    --caption-text-transform: #{$caption-text-transform};
+    --caption-letter-spacing: #{$caption-letter-spacing};
+  }
+
+  .headline {
+    @include rfs($headline-font-size, --headline-font-size);
+    @include rfs($headline-second-font-size, --headline-second-font-size);
+
+    --headline-font-weight: #{$headline-font-weight};
+    --headline-line-height: #{$headline-line-height};
+  }
+
+  // Button Group
+  .btn-group {
+    --btn-group-gap: #{$btn-group-gap};
+  }
+
+  // Content Box
+  .content-box {
+    --content-box-border-radius: #{$content-box-border-radius};
+    --content-box-shadow: #{$content-box-shadow};
+    --content-box-shadow-color: #{$content-box-shadow-color};
+  }
+
+  // Desktop Frame
+  .desktop-frame {
+    --desktop-frame-radius: #{$desktop-frame-radius};
+    --desktop-frame-border: #{$desktop-frame-border};
+    --desktop-frame-shadow: #{$desktop-frame-shadow};
+    --desktop-frame-shadow-color: #{$desktop-frame-shadow-color};
+    --desktop-frame-topbar-padding-x: #{$desktop-frame-topbar-padding-x};
+    --desktop-frame-topbar-padding-y: #{$desktop-frame-topbar-padding-y};
+  }
+
+  @include media-breakpoint-down(md) {
+    .headline {
+      @include rfs($headline-second-font-size, --headline-font-size);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "sass:map";
+
+.desktop-frame {
+  overflow: hidden;
+  background-color: white;
+  border: var(--desktop-frame-border);
+  border-color: white;
+  border-radius: var(--desktop-frame-radius);
+  box-shadow: var(--desktop-frame-shadow) var(--desktop-frame-shadow-color);
+
+  &-topbar {
+    padding: var(--desktop-frame-topbar-padding-x) var(--desktop-frame-topbar-padding-y);
+  }
+
+  &-image {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
