@@ -8,7 +8,7 @@ export function TheyLoveUs() {
   const sliderElement = useRef();
   const { t } = useTranslation();
 
-  const slides = range(30).map((e, i) => {
+  const slides = range(10).map((e, i) => {
     return (
       <ContentBox
         key={e}
@@ -27,7 +27,7 @@ export function TheyLoveUs() {
             <div className="row g-0 gap-4 align-items-center">
               <div className="col-3">
                 <img
-                  src={"https://avatar.iran.liara.run/public/" + i * 3}
+                  src={"https://doodleipsum.com/100x100/avatar?bg=fde68a&shape=circle&n=" + i * 5}
                   className="w-100 rounded-circle"
                   alt="avatar"
                 />

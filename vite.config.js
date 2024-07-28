@@ -5,13 +5,26 @@ import path from "path";
 import AutoImport from "unplugin-auto-import/vite";
 import { defineConfig } from "vite";
 import eslint from "vite-plugin-eslint";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "study-landing-page/#/",
+  base: "/study-landing-page",
   plugins: [
     react(),
-    pluginPurgeCss(),
+    pluginPurgeCss({
+      content: ["index.html", "**/*.js", "**.*.jsx"],
+      css: ["./dist/**/*.css"],
+      safelist: {
+        deep: [/btn/, /jam/, /leaf/],
+      },
+      variables: true,
+    }),
+    ViteImageOptimizer({
+      png: {
+        quality: 100,
+      },
+    }),
     eslint({
       fix: true,
     }),
@@ -65,11 +78,11 @@ export default defineConfig({
       },
     },
   },
-  //// debugging for preview
   // esbuild: {
-  //   minifyIdentifiers: false, // keep variable names
+  //   minifyIdentifiers: false, // keep variable names for debugging
   // },
-  // build: {
-  //   minify: "esbuild",
-  // },
+  build: {
+    // minify: "esbuild",
+    sourcemap: true,
+  },
 });
