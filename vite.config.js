@@ -1,3 +1,4 @@
+import pluginPurgeCss from "@mojojoejo/vite-plugin-purgecss";
 import react from "@vitejs/plugin-react";
 import lodash from "lodash";
 import path from "path";
@@ -10,6 +11,7 @@ export default defineConfig({
   base: "study-landing-page/#/",
   plugins: [
     react(),
+    pluginPurgeCss(),
     eslint({
       fix: true,
     }),
