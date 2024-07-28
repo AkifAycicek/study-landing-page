@@ -7,6 +7,7 @@ import eslint from "vite-plugin-eslint";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "study-landing-page",
   plugins: [
     react(),
     eslint({
@@ -62,4 +63,11 @@ export default defineConfig({
       },
     },
   },
+  //// debugging for preview
+  // esbuild: {
+  //   minifyIdentifiers: false, // keep variable names
+  // },
+  // build: {
+  //   minify: "esbuild",
+  // },
 });

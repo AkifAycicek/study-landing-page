@@ -1,4 +1,4 @@
-import * as classNames from "classnames";
+import classNames from "classnames";
 import { MenuScale } from "iconoir-react";
 import { Button } from "../../components/UI/button";
 

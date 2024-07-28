@@ -3,10 +3,11 @@ import { Button } from "@/components/UI/button/index.jsx";
 export function AppFooter() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLanguageChange = () => {
     const currentLang = i18n.language;
-    const newLang = currentLang === "tr" ? "en" : "tr";
+    const newLang = currentLang == "tr" ? "en" : "tr";
 
     const newPathname = location.pathname.replace(`/${currentLang}/`, `/${newLang}/`);
     navigate(newPathname);
@@ -91,10 +92,16 @@ export function AppFooter() {
                   <li className="list-group-item list-group-item-slate-900 ">
                     <div className="d-flex flex-column align-items-center align-items-lg-start justify-content-start gap-3">
                       <a target="blank" href="https://www.apple.com/app-store/">
-                        <img src="/assets/img/app-store.png" alt="" srcSet="" />
+                        <img
+                          src={new URL("@/assets/img/app-store.png", import.meta.url).href}
+                          alt=""
+                        />
                       </a>
                       <a target="blank" href="https://play.google.com/store/">
-                        <img src="/assets/img/google-store.png" alt="" srcSet="" />
+                        <img
+                          src={new URL("@/assets/img/google-store.png", import.meta.url).href}
+                          alt=""
+                        />
                       </a>
                     </div>
                   </li>

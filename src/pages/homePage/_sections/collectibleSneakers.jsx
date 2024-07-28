@@ -29,7 +29,7 @@ export function CollectibleSneakers() {
         <div className="col-auto sneakers-image">
           <img
             className="position-relative w-100"
-            src="/assets/img/collectible-sneakers.png"
+            src={new URL("@/assets/img/collectible-sneakers.png", import.meta.url).href}
             alt="collectible-sneakers"
           />
         </div>

@@ -7,7 +7,7 @@ async function loadLocaleResources() {
 
   for (const key in locales) {
     const { namespaces, lang } =
-      /\/src\/locales\/(?<lang>([A-Za-z0-9-_])+)\/(?<namespaces>.+)?\.(js|json)/.exec(key).groups;
+      /locales\/(?<lang>([A-Za-z0-9-_])+)\/(?<namespaces>.+)?\.(js|json)/.exec(key).groups;
     const module = await locales[key]();
     i18next.addResourceBundle(
       lang,

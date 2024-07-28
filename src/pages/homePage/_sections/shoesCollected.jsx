@@ -57,7 +57,7 @@ export function ShoesCollected() {
                     <DesktopFrame
                       style={{ width: "110%", left: "-5%" }}
                       className={"position-absolute bottom-80 "}
-                      image={"/assets/img/collectible-sneakers.png"}
+                      image={new URL("@/assets/img/collectible-sneakers.png", import.meta.url).href}
                     />
                     <p>
                       Emma Simpson collected one pair <br />

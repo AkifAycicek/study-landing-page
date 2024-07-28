@@ -13,7 +13,9 @@ export function TheyLoveUs() {
       <ContentBox
         key={e}
         className={"slide bg-white"}
-        icon={<img src="/assets/img/zoomers.png" alt="zoomers" />}>
+        icon={
+          <img src={new URL("@/assets/img/zoomers.png", import.meta.url).href} alt="zoomers" />
+        }>
         <div className="row g-0 gap-4">
           <div className="col-12">
             <p className="m-0">
