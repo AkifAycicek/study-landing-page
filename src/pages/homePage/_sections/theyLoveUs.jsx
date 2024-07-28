@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from "iconoir-react";
 
 export function TheyLoveUs() {
   const sliderElement = useRef();
+  const { t } = useTranslation();
 
   const slides = range(30).map((e, i) => {
     return (
@@ -32,7 +33,7 @@ export function TheyLoveUs() {
               <div className="col">
                 <div className="row flex-column ">
                   <p className="m-0">Hellen Jummy</p>
-                  <p className="m-0 fs-base">Team Lead</p>
+                  <p className="m-0 fs-base">{t("page.home:team_lead")}</p>
                 </div>
               </div>
             </div>
@@ -54,7 +55,7 @@ export function TheyLoveUs() {
       <div className="row justify-content-center g-0 gap-10">
         <div className="row g-0 px-4 px-lg-20 justify-content-center align-items-center gap-8">
           <div className="col-12 col-lg text-center text-lg-start">
-            <SectionText secondHeadline={"Because they love us"} />
+            <SectionText secondHeadline={t("page.home:because_they_love_us")} />
           </div>
           <div className="col-auto d-none d-lg-block">
             <ButtonGroup gap={6}>

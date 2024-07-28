@@ -1,9 +1,10 @@
 import Router from "@/router";
+import AppErrorBoundary from "@components/appErrorBoundary.jsx";
 import { IconoirProvider } from "iconoir-react";
 
 function App() {
   return (
-    <>
+    <AppErrorBoundary>
       <IconoirProvider
         iconProps={{
           strokeWidth: 1.5,
@@ -12,7 +13,7 @@ function App() {
         }}>
         <Router />
       </IconoirProvider>
-    </>
+    </AppErrorBoundary>
   );
 }
 

@@ -4,7 +4,6 @@ import { ButtonGroup } from "@components/UI/buttonGroup";
 import { ContentBox } from "@components/UI/contentBox";
 import { SectionText } from "@components/UI/sectionText";
 import { StatUp } from "iconoir-react";
-import { useNavigate } from "react-router-dom";
 
 export function StyleGuidePage() {
   const navigate = useNavigate();

@@ -1,7 +1,5 @@
-import PropTypes from "prop-types";
-import { Outlet } from "react-router-dom";
-import { AppFooter } from "./appFooter";
-import { AppHeader } from "./appHeader";
+import { AppFooter } from "@/layout/default/appFooter";
+import { AppHeader } from "@/layout/default/appHeader";
 
 export function DefaultLayout({ children }) {
   return (

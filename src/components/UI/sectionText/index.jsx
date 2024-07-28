@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import PropTypes from "prop-types";
+
 import { ButtonGroup } from "../buttonGroup";
 
 export function SectionText({

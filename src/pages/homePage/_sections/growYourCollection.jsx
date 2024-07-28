@@ -1,16 +1,18 @@
 import { DesktopFrame } from "@/components/UI/desktopFrame";
+
 import { Button } from "@components/UI/button";
 import { ButtonGroup } from "@components/UI/buttonGroup";
 import { SectionText } from "@components/UI/sectionText";
 
 export function GrowYourCollection() {
+  const { t } = useTranslation();
   return (
     <section className="section py-lg-32" id="grow-collection">
       <div className="row g-0 gap-10">
         <div className="row g-0">
           <SectionText
             className={"text-center text-lg-start align-items-center align-items-lg-start"}
-            secondHeadline={"Grow your collection"}>
+            secondHeadline={t("page.home:grow_your_collection")}>
             Enim neque massa porta adipiscing elit. Sem libero id faucibus nibh amet dictum
             pellentesque sed. Eu non turpis risus odio sapien, fames sit rhoncus. Nec magna sed
             interdum sit purus tellus. Et volutpat proin neque placerat at bibendum quam tellus.

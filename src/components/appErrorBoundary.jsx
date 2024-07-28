@@ -1,10 +1,14 @@
-import PropTypes from "prop-types";
+import i18next from "i18next";
 import { ErrorBoundary } from "react-error-boundary";
-import { Outlet, useNavigate } from "react-router-dom";
 
-export default function AppErrorBoundary({ children, resetText = "Back to home", onReset }) {
+export default function AppErrorBoundary({
+  children,
+  resetText = i18next.t("error:home_page"),
+  onReset,
+}) {
   const navigate = useNavigate();
   onReset ??= () => navigate("/");
+  const { t } = useTranslation();
   return (
     <ErrorBoundary
       onReset={() => onReset()}
@@ -13,7 +17,7 @@ export default function AppErrorBoundary({ children, resetText = "Back to home",
           <div className="mx-auto text-center p-5 gap-2 row align-items-center justify-content-center">
             <div className="col-auto d-flex gap-2">
               😔
-              <p>Something went wrong</p>
+              <p>{t(`error:something_went_wrong`)}</p>
             </div>
             {(error.code || error.message) && (
               <div className="col-12">
@@ -21,7 +25,7 @@ export default function AppErrorBoundary({ children, resetText = "Back to home",
                   {error.code && (
                     <small className="badge bg-slate-300 text-slate-700 mx-3">{error.code}</small>
                   )}
-                  {error.message}
+                  {has(error, "code") ? t(`error:${error.code}`) : error.toString()}
                 </p>
               </div>
             )}
@@ -29,14 +33,13 @@ export default function AppErrorBoundary({ children, resetText = "Back to home",
               <button
                 className="btn btn-sm btn-outline-amber-800"
                 onClick={() => resetErrorBoundary()}>
-                {resetText}
+                {t(resetText)}
               </button>
             </div>
           </div>
         </>
       )}>
-      {children}
-      <Outlet />
+      {children || <Outlet />}
     </ErrorBoundary>
   );
 }

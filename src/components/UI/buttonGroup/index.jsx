@@ -1,6 +1,5 @@
 import { Button } from "@components/UI/button";
 import classNames from "classnames";
-import PropTypes from "prop-types";
 
 export function ButtonGroup({ children, vertical, gap, className, ...attrs }) {
   const clssName = classNames(

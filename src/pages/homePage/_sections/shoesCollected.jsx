@@ -1,11 +1,13 @@
 import worldGeoJson from "@/assets/json/worldGeoJson.js";
 import { DesktopFrame } from "@/components/UI/desktopFrame";
+
 import { SectionText } from "@components/UI/sectionText";
 import { CircleMarker, Popup } from "react-leaflet";
 import { GeoJSON } from "react-leaflet/GeoJSON";
 import { MapContainer } from "react-leaflet/MapContainer";
 
 export function ShoesCollected() {
+  const { t } = useTranslation();
   const setColor = () => {
     const fillColor = shuffle(["#FBBF24", "#D97706", "#FBBF24", "#B45309"]).shift();
     return { weight: 0.5, fillColor, color: "#78350F", fillOpacity: 0.5 };
@@ -73,7 +75,7 @@ export function ShoesCollected() {
           "text-white text-center z-1 pe-none position-absolute top-50 start-50 translate-middle"
         }
         mainHeadline={"11,658,467"}
-        secondHeadline={"Shoes Collected"}
+        secondHeadline={t("page.home:shoes_collected")}
       />
     </section>
   );

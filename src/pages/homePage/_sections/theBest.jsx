@@ -4,14 +4,15 @@ import { ContentBox } from "@components/UI/contentBox";
 import { SectionText } from "@components/UI/sectionText";
 
 export function TheBest() {
+  const { t } = useTranslation();
   return (
     <section className="section bg-slate-900 text-white row g-0 gap-20" id="the-best">
       <div className="row g-0 justify-content-center align-items-center gap-8">
         <div className="col-12 col-lg text-center text-lg-start">
-          <SectionText secondHeadline={"The best of the best"} />
+          <SectionText secondHeadline={t("page.home:the_best_of_the_best")} />
         </div>
         <div className="col-auto">
-          <Button size={"xl"} outline variant="light" text={"Sign up now"} />
+          <Button size={"xl"} outline variant="light" text={t("page.home:sign_up_now")} />
         </div>
       </div>
       <div className="row gap-8 gap-lg-12 justify-content-center g-0">
@@ -20,7 +21,7 @@ export function TheBest() {
             <ContentBox
               key={index}
               className={"col-12 col-lg"}
-              title={<h1 className="fw-bold fs-2xl">Title</h1>}
+              title={<h1 className="fw-bold fs-2xl">{t("page.home:title")}</h1>}
               style={{
                 "--content-box-shadow-color": "rgb(var(--bs-white-rgb), 0.25)",
               }}
@@ -39,7 +40,7 @@ export function TheBest() {
                     size={"lg"}
                     iconLeft={<span className="jam jam-shopping-cart" />}
                     variant="light"
-                    text={"Buy Now"}
+                    text={t("page.home:buy_now")}
                   />
                 </ButtonGroup>
               }>

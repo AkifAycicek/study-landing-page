@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     "import/no-mutable-exports": "off",
     "react-refresh/only-export-components": "warn",
+    "react/jsx-no-undef": "off",
     "no-unused-vars": [
       "warn",
       {

@@ -1,19 +1,21 @@
 import { DesktopFrame } from "@/components/UI/desktopFrame";
+
 import { Button } from "@components/UI/button";
 import { ButtonGroup } from "@components/UI/buttonGroup";
 import { SectionText } from "@components/UI/sectionText";
 
 export function WhyJoinUs() {
+  const { t } = useTranslation();
   return (
     <section className="section py-4 py-lg-40" id="why-join-us">
       <div className="row align-items-center justify-content-center g-0 gap-8 bg-white shadow p-4 py-8 p-lg-20 shadow radius-8">
         <div className="col-auto col-lg z-1">
           <SectionText
             className={"text-lg-start align-items-lg-start text-center align-items-center"}
-            secondHeadline={"Why Join Us"}
+            secondHeadline={t("page.home:why_join_us")}
             buttons={
               <ButtonGroup>
-                <Button outline size={"lg"} variant="amber-900" text={"Sign up now"} />
+                <Button outline size={"lg"} variant="amber-900" text={t("page.home:sign_up_now")} />
               </ButtonGroup>
             }>
             <ul className="list-group list-group-flush fs-xl">
