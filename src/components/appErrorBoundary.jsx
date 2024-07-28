@@ -33,7 +33,7 @@ export default function AppErrorBoundary({
               <button
                 className="btn btn-sm btn-outline-amber-800"
                 onClick={() => resetErrorBoundary()}>
-                {t(resetText)}
+                {resetText}
               </button>
             </div>
           </div>
