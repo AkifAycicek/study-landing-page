@@ -1,5 +1,7 @@
 # Landing-page
 
+## See [Demo](https://akifaycicek.github.io/study-landing-page/).
+
 #### 🔃 Prepare the app before development or preview
 
 `yarn install` | `npm install`
